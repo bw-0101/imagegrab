@@ -1,0 +1,61 @@
+/* 图提取 - 悬浮按钮样式（右下角） */
+#imagegrab-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 48px;
+  z-index: 2147483000;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f6bff 0%, #7b5bff 100%);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(79, 107, 255, 0.45);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  opacity: 0.95;
+}
+
+#imagegrab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(79, 107, 255, 0.55);
+  opacity: 1;
+}
+
+#imagegrab-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(79, 107, 255, 0.4);
+}
+
+#imagegrab-btn.busy {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* 轻量提示条 */
+#imagegrab-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 108px;
+  z-index: 2147483001;
+  max-width: 320px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #ffffff;
+  background: rgba(30, 34, 48, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(6px);
+}
+
+#imagegrab-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}

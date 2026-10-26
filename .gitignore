@@ -1,0 +1,11 @@
+# 系统与编辑器杂项
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+
+# 压缩包（安装包由发布流程统一生成，避免重复提交）
+*.zip
